@@ -36,9 +36,9 @@
     <circle id="Ellipse_32" data-name="Ellipse 32" cx="17.5" cy="17.5" r="17.5" transform="translate(611 -249)"/>
     <circle id="Ellipse_33" data-name="Ellipse 33" cx="17.5" cy="17.5" r="17.5" transform="translate(668 -266)"/>
     <circle id="Ellipse_34" data-name="Ellipse 34" cx="17.5" cy="17.5" r="17.5" transform="translate(638 -204)"/>
-    <g id="Ellipse_69" data-name="Ellipse 69" transform="translate(456 -459)" fill="none" stroke="#000" stroke-width="20">
+    <g id="Ellipse_105" data-name="Ellipse 105" transform="translate(456 -459)" fill="none" stroke="#000" stroke-width="12">
       <circle cx="217" cy="217" r="217" stroke="none"/>
-      <circle cx="217" cy="217" r="207" fill="none"/>
+      <circle cx="217" cy="217" r="211" fill="none"/>
     </g>
   </g>
 </svg>

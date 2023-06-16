@@ -3,6 +3,10 @@
     margin: 0;
     border: 0;
 }
+body {
+    overflow: hidden;
+
+}
 @keyframes spin {
     from {
         transform: translate(-50%,-50%) rotate(0deg);
@@ -25,6 +29,10 @@
 nav {
     height: 5vw;
     border-bottom:10px black solid;
+    background-size: 300%,300%;
+    transition: all 0.2s;
+    background-image: linear-gradient(90deg, #00000000, #00000000);
+    background-size: 500%,500%;
 }
 nav h1 {
     position: absolute;
@@ -34,7 +42,8 @@ nav h1 {
     left: 50vw;
     transform: translate(-50%);
 }
-.images {
+.wholePizza {
+    opacity: 100;
     position: absolute;
     left: 50vw;
     top: 50vh;
@@ -43,18 +52,21 @@ nav h1 {
     animation-duration: 60s;
     animation-iteration-count: infinite;
 }
-.wholePizza {
-    display: block;
-}
 
 .slicedPizza {
-    display: none;
-}
-.pizzaSlice {
-    display: none;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%,-50%);
+    animation: spin;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
 }
 
-.anchor {
+
+.showBuilder {
     font-family: Bungee;
     position: absolute;
     background-image: linear-gradient(90deg, #00000000, #00000000);
@@ -67,8 +79,31 @@ nav h1 {
     cursor: pointer;
     transition: all 0.2s;
 }
-.anchor:hover {
+.showBuilder:hover {
     transition: all 0.2s;
+    color: white;
     animation: gradient 5s ease 0s infinite;
     background-image: linear-gradient(90deg, #00a2ff, #15ff00,#00a2ff);
+}
+.showBuilder:hover ~ nav {
+    animation: gradient 5s ease 0s infinite;
+    background-image: linear-gradient(90deg, #00a2ff, #15ff00,#00a2ff);
+    color: white;
+    border-bottom: rgb(0, 0, 0) 10px solid;
+}
+.showBuilder:hover ~ .wholePizza {
+    opacity: 0;
+}
+.showBuilder:hover ~ .slicedPizza{
+    opacity: 100;
+}
+
+.builder {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 50;
+    top: 10vh;
+    transition: all 2s;
 }
