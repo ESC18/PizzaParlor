@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+@keyframes spin {
+    0% {
+        transform: translate(-50%,-50%), rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%), rotate(360deg);
+    }
+}
+nav {
+    height: 5vw;
+    border-bottom:10px black solid;
+}
+nav h1 {
+    position: absolute;
+    top: -2.5vw;
+    font-size: 4vw;
+    font-family: Bungee Shade;
+    left: 50vw;
+    transform: translate(-50%);
+}
+.images {
+    position: absolute;
+    left: 50vw;
+    top: 25vw;
+    transform: translate(-50%,-50%);
+    animation: spin 60s infinite;
+}
+.wholePizza {
+    display: block;
+}
+
+.slicedPizza {
+    display: none;
+}
+.pizzaSlice {
+    display: none;
+}
