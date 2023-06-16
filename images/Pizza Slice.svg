@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="386.837" height="384.035" viewBox="0 0 386.837 384.035">
+  <g id="Pizza_Slice" data-name="Pizza Slice" transform="translate(-642 73)">
+    <g id="Polygon_5" data-name="Polygon 5" transform="matrix(0.695, 0.719, -0.719, 0.695, 878.914, -73)" fill="none">
+      <path d="M107.912,0,215.823,329.349H0Z" stroke="none"/>
+      <path d="M 107.9116058349609 64.23345947265625 L 27.59918212890625 309.3489990234375 L 188.2240295410156 309.3489990234375 L 107.9116058349609 64.23345947265625 M 107.9116058349609 -3.0517578125e-05 L 215.8232269287109 329.3489990234375 L -1.52587890625e-05 329.3489990234375 L 107.9116058349609 -3.0517578125e-05 Z" stroke="none" fill="#e5ce00"/>
+    </g>
+    <circle id="Ellipse_98" data-name="Ellipse 98" cx="17.5" cy="17.5" r="17.5" transform="translate(738 132)" fill="red"/>
+    <line id="Line_1" data-name="Line 1" x2="106" y2="112" transform="translate(695.5 142.5)" fill="none" stroke="#e5ce00" stroke-width="20"/>
+    <circle id="Ellipse_99" data-name="Ellipse 99" cx="17.5" cy="17.5" r="17.5" transform="translate(778 181)" fill="red"/>
+    <circle id="Ellipse_100" data-name="Ellipse 100" cx="17.5" cy="17.5" r="17.5" transform="translate(825 90)" fill="red"/>
+    <circle id="Ellipse_101" data-name="Ellipse 101" cx="17.5" cy="17.5" r="17.5" transform="translate(795 132)" fill="red"/>
+    <circle id="Ellipse_102" data-name="Ellipse 102" cx="17.5" cy="17.5" r="17.5" transform="translate(860 55)" fill="red"/>
+  </g>
+</svg>
