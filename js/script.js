@@ -1,15 +1,16 @@
+//Business Logic
 class pizza {
-    constructor(cheese,meat,topOne,topTwo) {
+    constructor(cheese,meat,topOne,topTwo,price) {
         this.cheese = cheese;
         this.meat = meat;
         this.topOne = topOne;
         this.topTwo = topTwo;
+        this.price = price;
     }
 }
 
 
-function priceTester(cheese, meat, topOne, topTwo) {
-    let price = 10;
+function priceTester(cheese, meat, topOne, topTwo,price) {
     if (cheese === "Mozzerella") {
         price += 1;
     }
@@ -50,41 +51,49 @@ function priceTester(cheese, meat, topOne, topTwo) {
         topTwo = "None";
         price += 0;
     }
-    let newPizza = new pizza(cheese,meat,topOne,topTwo);
+    let newPizza = new pizza(cheese,meat,topOne,topTwo,price);
+    priceTotal(newPizza);
+    uiDivGenerator(newPizza);
 }
 
+let totalPrice = 0;
+
+function priceTotal(newPizza) {
+    totalPrice += newPizza.price;
+    console.log(totalPrice);
+}
+
+//UI Logic
 function uiDivGenerator (newPizza) {
-    let div = document.createElement("div") 
+    let body = document.getElementById("pizzas");
+    let div = document.createElement("div");
+    div.className = "pizzaDiv";
+    let cheeseP = document.createElement("p");
+    cheeseP.innerText = "Cheese: " + newPizza.cheese;
+    cheeseP.className = "cheese";
+    div.appendChild(cheeseP);
+    let meatP = document.createElement("p");
+    meatP.innerText = "Meat: " + newPizza.meat;
+    meatP.className = "meat"
+    div.appendChild(meatP);
+    let toppingOneP = document.createElement("p");
+    toppingOneP.innerText = "Topping 1: " + newPizza.topOne;
+    div.appendChild(toppingOneP);
+    let toppingTwoP = document.createElement("p");
+    toppingTwoP.innerText = "Topping 2: " + newPizza.topTwo;
+    div.appendChild(toppingTwoP);
+    let priceP = document.createElement("p");
+    priceP.innerText = "Price: $" + newPizza.price;
+    priceP.className = "price"
+    div.appendChild(priceP);
+    let appearanceP = document.getElementById("appearanceP");
+    //---------------------------------------------------------------------------------
+    let totalPriceP = document.getElementById("priceP");
+    totalPriceP.innerText ="$" + totalPrice;
+
+    appearanceP.innerText = "";
+    body.appendChild(div);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function grabValue (event) {
     event.preventDefault();
@@ -92,7 +101,8 @@ function grabValue (event) {
     let meat = document.getElementById("meat").value;
     let topOne = document.getElementById("topOne").value;
     let topTwo = document.getElementById("topTwo").value;
-    priceTester(cheese,meat,topOne,topTwo);
+    let price = 10;
+    priceTester(cheese,meat,topOne,topTwo,price);
 }
 
 function showBuilder() {

@@ -164,3 +164,28 @@ option {
     font-family: Bungee;
     text-align: center;
 }
+
+.pizzaDiv {
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    color: black;
+    border-radius: 10px;
+}
+
+.price {
+    color: green;
+    border-top: 3px black solid;
+    font-family: Bungee;
+
+}
+.cheese {
+    color: #ffd900;
+    border-bottom: 3px black solid;
+}
+.meat {
+    color: red;
+    border-bottom: 3px black solid;
+}
