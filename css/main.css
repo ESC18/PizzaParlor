@@ -122,9 +122,26 @@ nav h1 {
 #pizzaForm h2 {
     border-bottom: 5px black solid;
 }
+select {
+    width: 200px;
+    font-size: 20px;
+    font-family: IBM Plex Mono;
+}
 
-
-
+option {
+    font-family: IBM Plex Mono;
+}
+#topSubmitButton, #resetButton {
+    width: 150px;
+    font-size: 20px;
+    position: absolute;
+    top: 95%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+}
+#resetButton {
+    top: 90%;
+}
 #prices {
     position: absolute;
     top: 1vh;
@@ -132,4 +149,18 @@ nav h1 {
     width: 20vw;
     height: 88vh;
     background-color: white;
+    font-family: IBM Plex Mono;
+    font-size: 1vw;
+}
+
+#pizzas {
+    width: 55.5vw;
+    height: 86vh;
+    top: 1vh;
+    position: absolute;
+    left: 22vw;
+    border: 10px solid rgb(255, 255, 255);
+    color: white;
+    font-family: Bungee;
+    text-align: center;
 }
