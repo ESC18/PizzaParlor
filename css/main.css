@@ -179,7 +179,6 @@ option {
     color: green;
     border-top: 3px black solid;
     font-family: Bungee;
-
 }
 .cheese {
     color: #ffd900;
@@ -188,4 +187,12 @@ option {
 .meat {
     color: red;
     border-bottom: 3px black solid;
+}
+.priceSize {
+    font-size: 30px;
+}
+.pizzaCount {
+    color: red;
+    border-top: 3px black solid;
+    font-size: 30px;
 }

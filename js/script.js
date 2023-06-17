@@ -53,6 +53,7 @@ function priceTester(cheese, meat, topOne, topTwo,price) {
     }
     let newPizza = new pizza(cheese,meat,topOne,topTwo,price);
     priceTotal(newPizza);
+    pizzaCountNumber();
     uiDivGenerator(newPizza);
 }
 
@@ -60,7 +61,11 @@ let totalPrice = 0;
 
 function priceTotal(newPizza) {
     totalPrice += newPizza.price;
-    console.log(totalPrice);
+}
+let pizzaCount = 0;
+
+function pizzaCountNumber() {
+    pizzaCount += 1;
 }
 
 //UI Logic
@@ -87,9 +92,15 @@ function uiDivGenerator (newPizza) {
     priceP.className = "price"
     div.appendChild(priceP);
     let appearanceP = document.getElementById("appearanceP");
-    //---------------------------------------------------------------------------------
     let totalPriceP = document.getElementById("priceP");
     totalPriceP.innerText ="$" + totalPrice;
+    let totalPizza = document.getElementById("numberP");
+    totalPizza.innerText = pizzaCount;
+//---------------------------------------------------------------------------------
+    
+
+
+
 
     appearanceP.innerText = "";
     body.appendChild(div);
