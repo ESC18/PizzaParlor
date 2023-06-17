@@ -104,7 +104,7 @@ nav h1 {
     height: 100vh;
     background-color: black;
     z-index: 50;
-    top: 10vh;
+    top: 100vh;
     transition: all 1s;
 }
 
@@ -163,6 +163,7 @@ option {
     color: white;
     font-family: Bungee;
     text-align: center;
+    overflow-y: scroll;
 }
 
 .pizzaDiv {
