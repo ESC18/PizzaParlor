@@ -180,6 +180,10 @@ option {
     border-top: 3px black solid;
     font-family: Bungee;
 }
+.size {
+    color: aqua;
+    border-bottom: 3px black solid;
+}
 .cheese {
     color: #ffd900;
     border-bottom: 3px black solid;
