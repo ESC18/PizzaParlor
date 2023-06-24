@@ -1,70 +1,55 @@
-//Business Logic
-class pizza {
-    constructor(size, cheese, meat, topOne, topTwo, price) {
+// Business Logic
+class Pizza {
+    constructor(size, cheese, meat, topOne, topTwo) {
         this.size = size;
         this.cheese = cheese;
         this.meat = meat;
         this.topOne = topOne;
         this.topTwo = topTwo;
-        this.price = price;
+        this.price = 7;
     }
-}
 
-
-function priceTester(size, cheese, meat, topOne, topTwo, price) {
-    if (size === "small") {
-        price += 1;
+    priceTester(size, cheese, meat, topOne, topTwo) {
+        if (size === "small") {
+            this.price += 1;
+        } else if (size === "medium") {
+            this.price += 3;
+        } else {
+            this.price += 5;
+        }
+        if (cheese === "Mozzerella") {
+            this.price += 1;
+        } else if (cheese === "Cheddar") {
+            this.price += 2;
+        } else {
+            cheese = "None";
+            this.price += 0;
+        }
+        if (meat === "Pepperoni") {
+            this.price += 2;
+        } else if (meat === "Sausage") {
+            this.price += 3;
+        } else {
+            meat = "None";
+            this.price += 0;
+        }
+        if (topOne === "Pineapple") {
+            this.price += 1;
+        } else if (topOne === "Tomato") {
+            this.price += 1;
+        } else {
+            topOne = "None";
+            this.price += 0;
+        }
+        if (topTwo === "Olive") {
+            this.price += 2;
+        } else if (topTwo === "Pepper") {
+            this.price += 1;
+        } else {
+            topTwo = "None";
+            this.price += 0;
+        }
     }
-    else if (size === "medium") {
-        price += 3;
-    }
-    else {
-        price += 5;
-    }
-    if (cheese === "Mozzerella") {
-        price += 1;
-    }
-    else if (cheese === "Cheddar") {
-        price += 2;
-    }
-    else {
-        cheese = "None";
-        price += 0;
-    }
-    if (meat === "Pepperroni") {
-        price += 2;
-    }
-    else if (meat === "Sausage") {
-        price += 3;
-    }
-    else {
-        meat = "None";
-        price += 0;
-    }
-    if (topOne === "Pineapple") {
-        price += 1;
-    }
-    else if (topOne === "Tomato") {
-        price += 1;
-    }
-    else {
-        topOne = "None";
-        price += 0;
-    }
-    if (topTwo === "Olive") {
-        price += 2;
-    }
-    else if (topTwo === "Pepper") {
-        price += 1;
-    }
-    else {
-        topTwo = "None";
-        price += 0;
-    }
-    let newPizza = new pizza(size, cheese, meat, topOne, topTwo, price);
-    priceTotal(newPizza);
-    pizzaCountNumber();
-    uiDivGenerator(newPizza);
 }
 
 let totalPrice = 0;
@@ -72,13 +57,14 @@ let totalPrice = 0;
 function priceTotal(newPizza) {
     totalPrice += newPizza.price;
 }
+
 let pizzaCount = 0;
 
 function pizzaCountNumber() {
     pizzaCount += 1;
 }
 
-//UI Logic
+// UI Logic
 function uiDivGenerator(newPizza) {
     let body = document.getElementById("pizzas");
     let div = document.createElement("div");
@@ -93,7 +79,7 @@ function uiDivGenerator(newPizza) {
     div.appendChild(cheeseP);
     let meatP = document.createElement("p");
     meatP.innerText = "Meat: " + newPizza.meat;
-    meatP.className = "meat"
+    meatP.className = "meat";
     div.appendChild(meatP);
     let toppingOneP = document.createElement("p");
     toppingOneP.innerText = "Topping 1: " + newPizza.topOne;
@@ -103,7 +89,7 @@ function uiDivGenerator(newPizza) {
     div.appendChild(toppingTwoP);
     let priceP = document.createElement("p");
     priceP.innerText = "Price: $" + newPizza.price;
-    priceP.className = "price"
+    priceP.className = "price";
     div.appendChild(priceP);
     body.appendChild(div);
     priceCountDisplay();
@@ -125,12 +111,15 @@ function grabValue(event) {
     let meat = document.getElementById("meat").value;
     let topOne = document.getElementById("topOne").value;
     let topTwo = document.getElementById("topTwo").value;
-    let price = 7;
-    priceTester(size, cheese, meat, topOne, topTwo, price);
+    let newPizza = new Pizza(size, cheese, meat, topOne, topTwo);
+    newPizza.priceTester(size, cheese, meat, topOne, topTwo);
+    priceTotal(newPizza);
+    pizzaCountNumber();
+    uiDivGenerator(newPizza);
 }
 
 function showBuilder() {
-    console.log(true)
+    console.log(true);
     let builderBackground = document.getElementById("builder");
     builderBackground.style.top = "10vh";
 }
@@ -139,5 +128,5 @@ window.onload = function () {
     let form = document.getElementById("pizzaForm");
     form.addEventListener("submit", grabValue);
     let showBuilderButton = document.getElementById("showBuilder");
-    showBuilderButton.addEventListener("click", showBuilder)
-}
+    showBuilderButton.addEventListener("click", showBuilder);
+};
